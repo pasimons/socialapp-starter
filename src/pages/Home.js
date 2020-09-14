@@ -9,6 +9,7 @@ class Home extends React.Component {
       <div className="Home">
         <Menu />
         <h2>Your One Stop Shop For All your traveling Needs</h2>
+        <h3>Jon was here</h3>
         <LoginForm />
       </div>
     );
