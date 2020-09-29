@@ -3,7 +3,7 @@ import Menu from "../components/menu/Menu";
 import { userIsAuthenticated } from "../redux/HOCs";
 import GetUsers  from "../components/getUsers/GetUsers";
 import DeleteUser from "../components/deleteUser/DeleteUser";
-// import GetMessages from "../components/getMessages/GetMessages";
+import FileUploader from "../components/fileUploader/FileUploader"
 
 class Profile extends React.Component {
   
@@ -12,9 +12,10 @@ class Profile extends React.Component {
       <div className="Profile">
         <Menu isAuthenticated={this.props.isAuthenticated} />
         <h2>Profile</h2>
+        {/* <FileUploader /> */}
         <GetUsers />
         <DeleteUser />
-        {/* <GetMessages /> */}
+       
       </div>
     );
   }

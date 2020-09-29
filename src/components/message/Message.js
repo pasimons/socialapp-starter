@@ -17,6 +17,29 @@ class Message extends React.Component {
         }
     }
 
+    // componentDidMount() {
+    //     this.client
+    //       .getRecentMessages()
+    //       .then(messages => {
+    //         this.setState({ messages })
+    //       })
+    //   }
+
+
+        
+    refreshMessageFeed() {
+        return this.client.getRecentMessages()
+        .then(messages => {
+            this.setState({ messages })
+            console.log({ messages });
+          })
+    }
+
+    componentDidMount() {
+        this.refreshMessageFeed()
+    }
+
+
     handleDeleteMessage = event => {
         event.preventDefault()
 
@@ -27,21 +50,12 @@ class Message extends React.Component {
             id: this.props.id,
             token: this.state.token
         })
+
+        this.refreshMessageFeed()
         // window.location.reload()
+        // this.getRecentMessages()
+        // this.client.getRecentMessages()
     }
-
-
-    // this.client.getRecentMessages()
-
-
-
-    // refreshMessages = event => {
-    //     getRecentMessages()
-    //         .then(messages => {
-    //             this.setState({ messages })
-    //         })
-    // }
-
 
 
     render() {

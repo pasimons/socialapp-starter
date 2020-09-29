@@ -57,5 +57,18 @@ class DataService {
     // ------------------------above this line may be deleted
 }
 
+
+// uploadPicture(pictureAsFormData){
+//     const endpoint = `${this.url}/users/${this.getUsername()}picture`
+//     const config = {
+//         headers: {
+//             Authorization: `Bearer ${this.getToken()}`,
+//         },
+//     }
+//     return this.client
+//         .put(endpoint, pictureAsFormData, config)
+// }
+
+
 export default DataService;
 
