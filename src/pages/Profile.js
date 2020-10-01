@@ -13,6 +13,7 @@ class Profile extends React.Component {
       <div className="Profile">
         <Menu isAuthenticated={this.props.isAuthenticated} />
         <h2>Kwitter-Profile</h2>
+       
         <UserList />
         <GetUsers />
         <DeleteUser />

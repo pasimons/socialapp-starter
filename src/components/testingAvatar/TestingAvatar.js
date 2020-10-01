@@ -1,6 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+
+
 ReactDOM.render(
   <>
     <Avatar icon={<UserOutlined />} />
@@ -22,5 +26,7 @@ ReactDOM.render(
       icon={<UserOutlined />}
     />
   </>,
-  mountNode,
+//   mountNode,
+document.getElementById('container')
 );
+// export default TestingAvatar
